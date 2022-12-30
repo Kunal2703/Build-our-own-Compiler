@@ -87,8 +87,7 @@ For this work, the tokens used (refer to Fig1)
  
 ###	IDENTIFIER 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210045947-03f89d59-c568-49ec-92b0-06c2e37470d8.png">
-Fig1 – (TokenTypes) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210045947-03f89d59-c568-49ec-92b0-06c2e37470d8.png"> Fig1 – (TokenTypes) 
  
  
 A Token class has been defined. The token class consists of the token text and token kind.  
