@@ -93,42 +93,32 @@ For this work, the tokens used (refer to Fig1)
 A Token class has been defined. The token class consists of the token text and token kind.  
 And then class also check the keywords. (refer to Fig2) 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210045969-263aff1b-a735-4294-b7fc-fb8f5a391c6e.png">
-Fig2 – (Token Class)
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210045969-263aff1b-a735-4294-b7fc-fb8f5a391c6e.png"> Fig2 – (Token Class)
 
 After Token Class,  Lexer Class has been define and consists entire source code of the program. To make it easier to lex/parse the final token/statement, append a newline.,  current_character in the String, current_position  in the String and next_character in the String. 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046019-de70e0f4-965d-4118-8364-e530c44f6feb.png">
-Fig3 – ( Lexer Class)
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046019-de70e0f4-965d-4118-8364-e530c44f6feb.png"> Fig3 – ( Lexer Class)
 
 The lexer class consists of following methods: 
 1. next_character() - Process the next character 
  
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046053-670cf6ee-617f-4067-a79d-66408a2189e3.png">
-Fig4 – (next_character method)
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046053-670cf6ee-617f-4067-a79d-66408a2189e3.png"> Fig4 – (next_character method)
 
 2. peek() - Return the lookahead character.
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046132-c79efdd3-4f97-47d3-8ca9-68979404542d.png">
-Fig5 – (peek method) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046132-c79efdd3-4f97-47d3-8ca9-68979404542d.png"> Fig5 – (peek method) 
  
 3. abort() - Found an invalid token; print message, Lexing error. 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046154-f469519a-1bf2-441f-b263-0105ca4c4ca0.png">
-
-Fig6 – (abort method) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046154-f469519a-1bf2-441f-b263-0105ca4c4ca0.png"> Fig6 – (abort method) 
  
 4. skipWhiteSpace() - Skip all whitespace besides the newlines we'll use to denote the conclusion of a statement. 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046189-4510802a-2339-4d6e-8d6c-33d44886941a.png">
-
-Fig 7 – (skipWhiteSpace method) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046189-4510802a-2339-4d6e-8d6c-33d44886941a.png"> Fig 7 – (skipWhiteSpace method) 
  
 5. skipComment() – Skip comments in the code. 
  
- <img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046211-b9d96416-b3a3-4fcc-9431-607fe1c10034.png">
-
-Fig8 – (skipComment method) 
+ <img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046211-b9d96416-b3a3-4fcc-9431-607fe1c10034.png"> Fig8 – (skipComment method) 
  
  
 6. getToken() - Identify the token and then return the token object. 
@@ -136,74 +126,52 @@ Fig8 – (skipComment method)
 <img width="443" alt="image" src="https://user-images.githubusercontent.com/78562069/210046229-99fa76e5-dd72-4ba2-8bdb-491ebfce1188.png">
 <img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046256-6275956c-f395-4fe2-8318-e678159b0711.png">
 <img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046266-26329402-1a0a-4565-a188-a9b91be13ded.png">
-
 Fig9 –(getToken) 
  
  
 Parser class has been define after Lexer, The parser object maintains track of the current token and verifies that the code follows grammatical rules and consists lexer, code_generator, symbols, curToken, peekToken, nextToken  
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046290-6485a19e-ca1c-4f23-838d-402dc1168296.png">
-
-Fig10 – (Parser Class) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046290-6485a19e-ca1c-4f23-838d-402dc1168296.png"> Fig10 – (Parser Class) 
  
 The Parser class consists of following methods: 
 1. checkToken() - If the current token matches, return true. 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046330-76ee8aff-5429-4ef8-a107-d947bbebe9d0.png">
-
-Fig11 – (checkToken method) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046330-76ee8aff-5429-4ef8-a107-d947bbebe9d0.png"> Fig11 – (checkToken method) 
  
 
 2. checkpeek() – If next token matched, return true 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046362-9622ec6c-bc53-454b-a686-3a279c56b02c.png">
-
-Fig12 – (checkpeek method) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046362-9622ec6c-bc53-454b-a686-3a279c56b02c.png"> Fig12 – (checkpeek method) 
  
 3. match() - Check to see whether the token matches. Error if not. 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046395-1d67c9ec-0eb9-4885-af3e-079169ebf950.png">
-
-
-Fig13 - (match method) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046395-1d67c9ec-0eb9-4885-af3e-079169ebf950.png"> Fig13 - (match method) 
  
 4. nextToken() - the current token is advanced. 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046411-8f670f34-34b6-44c0-a59f-a59cf06b6771.png">
-
-Fig14 – (nextToken method) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046411-8f670f34-34b6-44c0-a59f-a59cf06b6771.png"> Fig14 – (nextToken method) 
  
  
 5. isComparisonOperator() - If a comparison operator is present in the current token, return true. 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046443-0afccdb2-9fd6-4c52-9212-276fb9565ce4.png">
-
-Fig15 – (isComparisonOperator method) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046443-0afccdb2-9fd6-4c52-9212-276fb9565ce4.png"> Fig15 – (isComparisonOperator method) 
  
  
 6. expression() - expression ::= term {( "-" | "+" ) term} 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046467-2d210bde-c04b-4571-890c-fc1947cedb49.png">
-
-Fig16 – (experession method) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046467-2d210bde-c04b-4571-890c-fc1947cedb49.png"> Fig16 – (experession method) 
  
 7. term() - term ::= unary {( "/" | "*" ) unary} 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046508-78b42c47-b083-44e1-a666-26c3aab85f1d.png">
-
-Fig17 – (trem method) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046508-78b42c47-b083-44e1-a666-26c3aab85f1d.png"> Fig17 – (trem method) 
  
 8. unary() - unary ::= ["+" | "-"] primary 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046526-7045df49-1e12-4c99-b9a1-e526e76900c7.png">
-
-Fig18 – (unary method) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046526-7045df49-1e12-4c99-b9a1-e526e76900c7.png"> Fig18 – (unary method) 
  
 9. primary() - primary ::= number | ident. If the token is invalid then give Error 
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046547-ae19e249-ac78-4e32-bfbd-764b1bfbd9e7.png">
-
-Fig19 – (primary method) 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/78562069/210046547-ae19e249-ac78-4e32-bfbd-764b1bfbd9e7.png"> Fig19 – (primary method) 
  
 10. statement() – This function handles statements. It checks for the following cases- 
  
