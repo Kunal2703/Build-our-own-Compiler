@@ -5,3 +5,8 @@ Phases of the Compiler: A compiler operates in stages. A phase is an operation t
 
 
 <img width="309" alt="image" src="https://user-images.githubusercontent.com/78562069/210045410-ecace9e3-7ea8-4a37-ac04-be6a26e19b23.png">
+
+### Lexical Analysis: 
+Tokens are created using a lexical analyser from a stream of input string characters. Tokens are then broken down into smaller parts to create meaningful expressions. The smallest unit in a programming language with meaning (such as +, -, *, or "function") is called a token. 
+ 
+<img width="188" alt="image" src="https://user-images.githubusercontent.com/78562069/210045507-1274dbd3-c15b-4169-bc2a-6b72b4bb9cbb.png">
