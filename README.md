@@ -1,5 +1,15 @@
 # Build-our-own-Compiler (Custom Compiler)
 A compiler converts computer code from one language to another without altering the program's meaning. It is also assumed that a compiler would produce space and time efficient, effective target code. The compilation process is divided into steps. Each step of the compiler receives input from the stage before it, has its own representation of the source code, and feeds its output to the stage after. The compiler examines the source code, separates it into its component components, and then does a lexical, grammar, and syntax check. Assembly Language Code, which is also known as intermediate code, is produced during the analysis phase.
+
+## Designing and implementing a compiler is a complex and challenging task that involves multiple stages. Here's a high-level overview of the process:
+
+1. Lexical Analysis: The compiler reads the source code character by character and groups them into tokens. This process is known as lexical analysis or                        tokenization. The tokens are then passed to the next stage of the compiler.
+2. Syntax Analysis: The compiler parses the tokens generated in the previous stage and checks if they follow the rules of the programming language's                           grammar. This process is called syntax analysis or parsing. If there are any syntax errors, the compiler generates error messages.
+3. Semantic Analysis: After parsing, the compiler checks if the program's semantics are correct. This includes type checking, scope analysis, and other                         checks that ensure the program's logical correctness.
+4. Intermediate Code Generation: If the source code is semantically correct, the compiler generates an intermediate representation of the code. The                                        intermediate code is typically in a lower-level language than the source code and is easier to analyze and optimize.
+5. Optimization: The intermediate code is optimized to make it faster and more efficient. This stage can include various techniques such as loop                            unrolling, constant folding, and register allocation.
+6. Code Generation: Finally, the optimized intermediate code is translated into assembly code or machine code that can be executed by the computer. The                       code generator generates the assembly code or machine code, which is then written to a file or executed directly.
+
 ## STRUCTURE OF THE COMPILER DESIGN
 Phases of the Compiler: A compiler operates in stages. A phase is an operation that logically connects two representations by taking a source programme from one and producing an output in the other.
 
